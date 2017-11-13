@@ -1,0 +1,42 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.3.3'
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:1.5'
+        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.7.3'
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+ext {
+    bintrayRepo = 'tbruyelle'
+    bintrayName = 'RxPermissions'
+    publishedGroupId = 'com.tbruyelle.rxpermissions'
+    artifact = 'rxpermissions'
+    libraryName = 'RxPermissions'
+    libraryVersion = '0.9.4'
+    libraryDescription = 'A wrapper for Android 6.0 permissions'
+    siteUrl = 'https://github.com/tbruyelle/RxPermissions'
+    gitUrl = 'https://github.com/tbruyelle/RxPermissions.git'
+    developerId = 'tbruyelle'
+    developerName = 'Thomas Bruyelle'
+    developerEmail = 'thomas.bruyelle@gmail.com'
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
